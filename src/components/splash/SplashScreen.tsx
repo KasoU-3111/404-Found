@@ -31,7 +31,7 @@ export const SplashScreen = ({ onEnter }: SplashScreenProps) => {
           
           <div className="relative">
             <h1 className="text-7xl md:text-9xl font-black bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-fade-in transition-all duration-500 group-hover:scale-110 group-hover:tracking-wider">
-              (404 Found)
+              404 Found
             </h1>
             
             {/* Animated underline */}

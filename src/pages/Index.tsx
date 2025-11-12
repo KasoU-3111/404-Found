@@ -70,7 +70,7 @@ const Index = () => {
               <Search className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">Research Hub</h2>
+              <h2 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">404 Found</h2>
               <p className="text-sm text-muted-foreground">Welcome, {user.name}</p>
             </div>
           </div>
@@ -106,7 +106,7 @@ const Index = () => {
 
       <footer className="border-t border-border/50 mt-20">
         <div className="container mx-auto px-4 py-8 text-center text-muted-foreground">
-          <p>© 2024 Research Hub. Built for academic excellence.</p>
+          <p>© 2025 Research Hub. Built for academic excellence.</p>
         </div>
       </footer>
     </div>
