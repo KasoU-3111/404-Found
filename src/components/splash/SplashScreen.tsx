@@ -19,22 +19,34 @@ export const SplashScreen = ({ onEnter }: SplashScreenProps) => {
       {/* Main content */}
       <div className="relative z-10 text-center space-y-8 animate-scale-in">
         <div 
-          className="cursor-pointer group"
+          className="cursor-pointer group relative"
           onClick={onEnter}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <h1 className="text-8xl md:text-9xl font-black bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-fade-in transition-all duration-300 group-hover:scale-110">
-            404
-          </h1>
-          <p className="text-4xl md:text-5xl font-bold text-foreground mt-4 transition-all duration-300 group-hover:text-primary">
-            Found
-          </p>
-          
           {/* Glowing effect on hover */}
           {isHovered && (
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 blur-3xl rounded-full animate-pulse" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/40 via-accent/40 to-primary/40 blur-[100px] rounded-full animate-pulse" />
           )}
+          
+          <div className="relative">
+            <h1 className="text-7xl md:text-9xl font-black bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-fade-in transition-all duration-500 group-hover:scale-110 group-hover:tracking-wider">
+              (404 Found)
+            </h1>
+            
+            {/* Animated underline */}
+            <div className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+            
+            {/* Floating particles around text */}
+            {isHovered && (
+              <>
+                <div className="absolute -top-4 left-1/4 w-2 h-2 rounded-full bg-primary animate-ping" />
+                <div className="absolute -top-2 right-1/3 w-1 h-1 rounded-full bg-accent animate-ping" style={{ animationDelay: '0.2s' }} />
+                <div className="absolute bottom-0 left-1/3 w-1.5 h-1.5 rounded-full bg-primary animate-ping" style={{ animationDelay: '0.4s' }} />
+                <div className="absolute bottom-2 right-1/4 w-2 h-2 rounded-full bg-accent animate-ping" style={{ animationDelay: '0.1s' }} />
+              </>
+            )}
+          </div>
         </div>
 
         <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>

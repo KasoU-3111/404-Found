@@ -63,18 +63,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border/50 backdrop-blur-xl bg-background/80 sticky top-0 z-50">
+      <header className="border-b border-border/50 backdrop-blur-xl bg-background/80 sticky top-0 z-50 shadow-lg shadow-primary/5">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+          <div className="flex items-center gap-3 group cursor-pointer">
+            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-all group-hover:scale-110">
               <Search className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-foreground">Research Hub</h2>
+              <h2 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">Research Hub</h2>
               <p className="text-sm text-muted-foreground">Welcome, {user.name}</p>
             </div>
           </div>
-          <Button variant="outline" onClick={logout} className="gap-2">
+          <Button variant="outline" onClick={logout} className="gap-2 hover:border-primary hover:text-primary hover:shadow-lg hover:shadow-primary/20 transition-all">
             <LogOut className="h-4 w-4" />
             Logout
           </Button>
@@ -83,12 +83,12 @@ const Index = () => {
 
       <main className="container mx-auto px-4 py-12">
         <Tabs defaultValue="search" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-            <TabsTrigger value="search" className="gap-2">
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-card/50 backdrop-blur-sm p-1.5 shadow-lg">
+            <TabsTrigger value="search" className="gap-2 data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20">
               <Search className="h-4 w-4" />
               Search Engine
             </TabsTrigger>
-            <TabsTrigger value="papers" className="gap-2">
+            <TabsTrigger value="papers" className="gap-2 data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20">
               <BookOpen className="h-4 w-4" />
               Research Papers
             </TabsTrigger>

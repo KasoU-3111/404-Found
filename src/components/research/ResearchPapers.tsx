@@ -62,14 +62,15 @@ export const ResearchPapers = () => {
         {filteredPapers.map((paper, index) => (
           <Card
             key={index}
-            className="group hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 backdrop-blur-sm bg-card/80 hover:-translate-y-1"
+            className="group hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 backdrop-blur-sm bg-card/80 hover:-translate-y-2 animate-fade-in"
             style={{ animationDelay: `${index * 50}ms` }}
           >
             <CardHeader className="space-y-3">
-              <Badge className={`w-fit ${getCategoryColor(paper.category)}`}>
+              <Badge className={`w-fit ${getCategoryColor(paper.category)} transition-all group-hover:scale-105`}>
                 {paper.category}
               </Badge>
-              <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2">
+              <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors line-clamp-2 flex items-start gap-2">
+                <BookOpen className="h-4 w-4 mt-1 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
                 {paper.title}
               </CardTitle>
               <CardDescription className="line-clamp-2">
@@ -79,7 +80,7 @@ export const ResearchPapers = () => {
             <CardContent>
               <Button
                 variant="outline"
-                className="w-full group-hover:border-primary group-hover:text-primary"
+                className="w-full group-hover:border-primary group-hover:text-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all"
                 asChild
               >
                 <a href={paper.url} target="_blank" rel="noopener noreferrer">

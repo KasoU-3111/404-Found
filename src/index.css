@@ -52,5 +52,8 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 80%, hsl(var(--accent) / 0.05) 0%, transparent 50%);
+    background-attachment: fixed;
   }
 }
